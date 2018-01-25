@@ -1,0 +1,79 @@
+<ion-header class="bar bar-header bar-balanced">
+  <a href="#/SetPrivilege" class="button icon-left ion-arrow-left-c button-clear"></a>
+  <h3 style="margin-left: 1%; line-height: 0px; font-size: 23px;">Edit Guardian Privileges</h3>
+</ion-header>
+<ion-content class="content has-header ionic-pseudo padding" ng-controller="SetPrivilegeDetailController">
+    <div class="row">
+      <div class="col">
+        <a align="left" style="border: none;" class="item item-avatars">
+          <img ng-src="{{guardian.image}}">
+        </a>
+      </div>
+    </div>
+    <div class="row" style="padding: 10px;">
+      <div class="col">
+        <div>
+          <h2 style="font-size: 16px;" class="ng-binding">
+            <b>{{guardian.username}}</b>
+          </h2>
+        </div>
+      </div>
+      <div class="col">
+        <div>
+          <h2 style="font-size: 16px;" class="ng-binding">
+            <b>Status: <span>{{guardian.active}}</span></b>
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="hr" style="margin-top: -20px;"></div>
+    <div class="row">
+      <div class="col" style="padding:0px">
+        <ion-checkbox name="" type="checkbox" value="" ng-checked="guardian.messages"
+          ng-change="onChange(guardian, 'messages', guardian.messages)" ng-model="guardian.messages">
+          Messages
+        </ion-checkbox>
+      </div>
+      <div class="col" style="padding:0px">
+        <ion-checkbox name="" type="checkbox" value="" ng-checked="guardian.calendar"
+          ng-change="onChange(guardian, 'calendar', guardian.calendar)" ng-model="guardian.calendar"
+          ng-model="data.Calendar">
+          Calendar
+        </ion-checkbox>
+      </div>
+      <div class="col" style="padding:0px">
+        <ion-checkbox name="" type="checkbox" value="" ng-checked="guardian.gallery"
+        ng-change="onChange(guardian, 'gallery', guardian.gallery)" ng-model="guardian.gallery"
+        ng-model="data.Gallery">
+          Gallery
+        </ion-checkbox>
+      </div>
+    </div>
+    <div class="hr"></div>
+    <ion-list class="children-privileges">
+      <ion-item ng-repeat="child_privilege in guardian.children_privileges" class="row">
+        <div class="col col-20">
+          <ion-avatar item-left>
+            <img ng-src="{{child_privilege.img_src}}" class="item-avatar-small"/>
+          </ion-avatar>
+          <h2 class="child-privilege-name">{{child_privilege.first_name}}</h2>
+        </div>
+        <div class="col">
+          <ion-checkbox name="" type="checkbox" value="" ng-checked="child_privilege.assessments"
+          ng-change="onChange(guardian, 'assessments', child_privilege.assessments, child_privilege.child_id)" ng-model="child_privilege.assessments">
+            Notes
+          </ion-checkbox>
+          <ion-checkbox name="" type="checkbox" value="" ng-checked="child_privilege.check_in_out"
+          ng-change="onChange(guardian, 'check_in_out', child_privilege.check_in_out, child_privilege.child_id)" ng-model="child_privilege.check_in_out">
+            Check in/out
+          </ion-checkbox>
+        </div>
+        <div class="col">
+          <ion-checkbox name="" type="checkbox" value="" ng-checked="child_privilege.billing"
+          ng-change="onChange(guardian, 'billing', child_privilege.billing, child_privilege.child_id)" ng-model="child_privilege.billing">
+            Billing
+          </ion-checkbox>
+        </div>
+      </ion-item>
+    </ion-list>
+</ion-content>

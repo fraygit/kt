@@ -1,0 +1,27 @@
+<ion-header class="bar bar-header bar-balanced"> <!-- <button class="button button-icon icon ion-navicon"></button> -->
+<!-- <a href="#/dashboard" class="button-clear"> <i class="ion-arrow-left-c"></i> Back</a> -->
+<a href="#/dashboard"
+	class="button icon-left ion-arrow-left-c button-clear "></a>
+<h3 style="margin-left: 1%; line-height: 0px;">Calendar</h3>
+</ion-header>
+<div class="padding">
+	<ion-content class="content has-header ionic-pseudo">
+	<section class="content" style="margin-top: 20px;"
+		ng-init="loadEvents()" ng-controller="calendarController">
+		<section class="container">
+			<div class="well well-sm">
+				<calendar calendar-mode="mode" event-source="eventSource"
+					style="position:top"> <!-- 					<calendar ng-model="currentDate" -->
+				<!-- 					calendar-mode="mode" event-source="eventSource" --> <!-- 					range-changed="reloadSource(startTime, endTime)" -->
+				<!-- 					event-selected="onEventSelected(event)"> --> </calendar>
+			</div>
+			<div class="col"></div>
+
+		</section>
+	</section>
+
+
+	</ion-content>
+
+
+</div>

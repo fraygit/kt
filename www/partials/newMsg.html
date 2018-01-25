@@ -1,0 +1,50 @@
+<ion-header class="bar bar-header bar-balanced"> <a
+	href="#/myMessages"
+	class="button icon-left ion-arrow-left-c button-clear "
+></a>
+<h3 style="margin-left: 1%; line-height: 0px;">Compose</h3>
+</ion-header>
+
+<div class="padding">
+	<ion-content class="content has-header ionic-pseudo"
+		style="margin-top:8px"
+	>
+	<div ng-controller="newMsgController">
+		<form>
+			<div class="col-md-12 violet">
+				<div class="col-md-4 col-xs-4">
+					<a href="#/myMessages"> <i class="icon ion-close-round"></i>
+						Discard
+					</a>
+				</div>
+				<div class="col-md-4 col-xs-4">
+					<!-- 						<a href=""> <i class="icon ion-paperclip" style="font-size:18px;"></i> Attach </a>						 -->
+					<!-- 						<input ng-model="files" ng-Change="angular.element(this).scope().file_changed(this.files)" type="file" accept="image/*" /> -->
+					<!--<input type="file" name="file" multiple onchange="angular.element(this).scope().file_changed(this)" />
+					<input type="file" ngf-select ng-model="picFile" name="file" accept="image/*">
+					<input type="file" id="file" name="file"/>
+					<div class="button" ngf-select ng-model="files" ngf-multiple="true">Select</div>-->
+				</div>
+				<div class="col-md-4 col-xs-4">
+					<a href="" ng-click="submit()"> <i
+						class="icon ion-paper-airplane"
+					></i> Send
+					</a>
+				</div>
+				<div style="clear: both"></div>
+			</div>
+			<div class="list">
+				<label class="item item-input"> <input type="text"
+					placeholder="Subject" ng-model="subject" style="line-height: 20px;"
+				>
+				</label> <label class="item item-input"> <textarea
+						placeholder="Message" ng-model="body"
+						style="height: 100px; background: transparent;"
+					></textarea>
+				</label>
+			</div>
+		</form>
+	</div>
+	</ion-content>
+</div>
+<div style="clear: both"></div>

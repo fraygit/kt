@@ -1,0 +1,60 @@
+<ion-header class="bar bar-header bar-balanced"> <a
+	href="#/billingMenus"
+	class="button icon-left ion-arrow-left-c button-clear "
+></a>
+<h3 style="margin-left: 1%; line-height: 0px;">Card Information</h3>
+</ion-header>
+<div class="padding" ng-controller="cardInfoController">
+	<div style="height: 50px;"></div>
+	<ion-content class="content has-header ionic-pseudo">
+	<div>
+
+		<div class="list" style="padding-top: 30px;">
+			<div align="center" href="#" style="border: none; margin-left: 35%"
+				class="item item-avatars"
+			>
+				<img ng-src="{{parentImage}}">
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div style="text-align: right" class="col">
+			<p class="hader_text">Parent Name :</p>
+		</div>
+		<div class="col col-50">
+			<p class="hader_text">
+				<span>{{parent_name}}</span>
+			</p>
+		</div>
+	</div>
+	<div class="row">
+		<div style="text-align: right" class="col">
+			<p class="hader_text">Center Name :</p>
+		</div>
+		<div class="col col-50">
+			<p class="hader_text">
+				<span>{{center_name}}</span>
+			</p>
+		</div>
+	</div>
+	<div class="row">
+		<div style="text-align: right" class="col">
+			<p class="hader_text">Card No:</p>
+		</div>
+		<div class="col col-50">
+			<p class="hader_text">
+				<span>{{card_no}}</span>
+			</p>
+		</div>
+	</div>
+	<div class="row">
+		<div style="text-align: right" class="col">
+			<p class="hader_text">Card Type:</p>
+		</div>
+		<div class="col col-50">
+			<p class="hader_text">
+				<span>{{card_type}}</span>
+			</p>
+		</div>
+	</div>
+</div>

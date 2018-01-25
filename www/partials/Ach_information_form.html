@@ -1,0 +1,183 @@
+<html>
+<head>
+<meta content="en-us" http-equiv="Content-Language">
+<meta content="text/html; charset=windows-1252"
+	http-equiv="Content-Type"
+>
+<title>Kangaroo Time</title>
+</head>
+
+<style>
+form table {
+	width: 100%;
+}
+
+.account-holder-input>input {
+	width: 100%;
+}
+
+.account-holder-input>input {
+	height: 40px;
+	padding-left: 10px;
+	width: 100%;
+}
+
+.btn-submit {
+	background: #7b3c84 none repeat scroll 0 0;
+	border: medium none;
+	border-radius: 4px;
+	color: #fff;
+	padding: 10px;
+	width: 100%;
+}
+
+body {
+	background: #fff none repeat scroll 0 0;
+	margin: 0;
+	padding: 0 !important;
+}
+</style>
+
+
+
+<body bgcolor="#D4D7E4" alink="#000080" vlink="#000080" text="#000000"
+	link="#000080"
+>
+
+	<form autocomplete="off"
+		onsubmit="document.epayform.submitbutton.value='Please Wait... Processing';"
+		method="POST"
+		action="https://sandbox.axiaepay.com/interface/epayform/_vf7zTwe2eVr2XnhMyJCLWke600f0595"
+		name="epayform"
+	>
+		<input type="hidden" value="1" name="UMsubmit"> <input
+			type="hidden" value="_vf7zTwe2eVr2XnhMyJCLWke600f0595" name="UMkey"
+		> <input type="hidden" value="http://localhost:8100/#/"
+			name="UMredirDeclined"
+		> <input type="hidden" value="http://localhost:8100/#/"
+			name="UMredirApproved"
+		> <input type="hidden"
+			value="s/1447916327.8645297758778/7c4bb511093e3109e08e5f2a2fd4974105df5fb9/y"
+			name="UMhash"
+		> <input type="hidden" value="check:sale" name="UMcommand"> <input
+			type="hidden" value="7.0" name="UMamount"
+		> <input type="hidden" value="" name="UMtax"> <input
+			type="hidden" value="12345" name="UMinvoice"
+		> <input type="hidden" value="" name="UMcustid"> <input
+			type="hidden" value="" name="UMrecurring"
+		> <input type="hidden" value="" name="UMaddcustomer"> <input
+			type="hidden" value="" name="UMbillamount"
+		> <input type="hidden" value="" name="UMcustreceipt"> <input
+			type="hidden" value="" name="UMschedule"
+		> <input type="hidden" value="" name="UMnumleft"> <input
+			type="hidden" value="" name="UMstart"
+		> <input type="hidden" value="" name="UMexpire"> <input
+			type="hidden" value="" name="UMdescription"
+		> <input type="hidden" value="all" name="UMechofields"> <input
+			type="hidden" value="a:0:{}" name="UMformString"
+		>
+		<div align="center">
+			<table cellspacing="0" cellpadding="4" border="0" width="700">
+				<tbody>
+					<tr>
+						<td bgcolor="#C4C7D4" width="692" colspan="2">
+							<p align="center">
+								<img border="0" width="44" hspace="3" height="28"
+									src="https://sandbox.axiaepay.com/images/vericheck.gif"
+								>
+							</p>
+						</td>
+					</tr>
+
+					<tr>
+						<td bgcolor="#C4C7D4" width="692" colspan="2"><b><font
+								face="Verdana, Arial"
+							>Checking Account Information:</font> </b></td>
+					</tr>
+					<input type="hidden" value="1" name="paybycheck">
+					<tr>
+						<td bgcolor="#F0F0F0" align="center" colspan="2"><img alt=""
+							src="/images/samplecheck.gif"
+						></td>
+					</tr>
+					<tr>
+						<!--<td class="account-holder" bgcolor="#F0F0F0" align="right" width="234"><font size="2" face="Verdana">
+			</font></td>-->
+						<td class="account-holder-input" bgcolor="#F0F0F0" width="450">
+							<input type="text" placeholder="Account Holder Name" value=""
+							size="25" name="UMname"
+						>
+						</td>
+					</tr>
+					<tr>
+						<!--<td class="account-holder" bgcolor="#F0F0F0" align="right" width="234"><font size="2" face="Verdana">
+			</font></td>-->
+						<td class="account-holder-input" bgcolor="#F0F0F0" width="450">
+							<input type="text" size="25" placeholder="Bank Routing Number"
+							name="UMrouting"
+						>
+						</td>
+					</tr>
+					<tr>
+						<!--<td class="account-holder" bgcolor="#F0F0F0" align="right" width="234"><font size="2" face="Verdana">
+			</font></td>-->
+						<td class="account-holder-input" bgcolor="#F0F0F0" width="450">
+							<input type="text" size="25" placeholder="Bank Account Number"
+							name="UMaccount"
+						>
+						</td>
+					</tr>
+					<tr>
+						<!--<td bgcolor="#F0F0F0" align="right" width="234"><font size="2" face="Verdana">
+			</font></td>-->
+						<td class="account-holder-input" bgcolor="#F0F0F0" width="450">
+							<input type="text" size="11" placeholder="Social Security Number"
+							name="UMssn"
+						>
+						</td>
+					</tr>
+					<tr>
+						<!--<td class="account-holder" bgcolor="#F0F0F0" align="right" width="234"><font size="2" face="Verdana">
+			</font></td>-->
+						<td class="account-holder-input" bgcolor="#F0F0F0" width="450">
+							<input type="text" size="15" placeholder="Drivers License Number"
+							name="UMdlnum"
+						>
+						</td>
+					</tr>
+					<tr>
+						<!--<td class="account-holder" bgcolor="#F0F0F0" align="right" width="234"><font size="2" face="Verdana">
+			</font></td>-->
+						<td class="account-holder-input" bgcolor="#F0F0F0" width="450">
+							<input type="text" size="2" placeholder="Drivers License State"
+							name="UMdlstate"
+						>
+						</td>
+					</tr>
+
+					<tr>
+						<td bgcolor="#F0F0F0" width="692" colspan="2">
+							<p align="center">
+								<input class="btn-submit" type="submit"
+									value="Process Payment &gt;&gt;" name="submitbutton"
+								>
+							</p>
+
+						</td>
+					</tr>
+					<tr>
+						<td bgcolor="#FFFFFF" width="692" colspan="2">
+							<div align="center"></div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+
+
+
+
+	</form>
+</body>
+</html>

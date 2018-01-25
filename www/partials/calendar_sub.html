@@ -1,0 +1,25 @@
+<ion-header class="bar bar-header bar-balanced"> <!-- <button class="button button-icon icon ion-navicon"></button> -->
+<!-- <a href="#/dashboard" class="button-clear"> <i class="ion-arrow-left-c"></i> Back</a> -->
+<a href="#/calendar"
+	class="button icon-left ion-arrow-left-c button-clear "
+></a>
+<h3 style="margin-left: 1%; line-height: 0px;">Calendar</h3>
+</ion-header>
+<div class="padding" ng-controller="calendarEventController">
+	<ion-content class="content has-header ionic-pseudo">
+	<div class="col" style="margin-top: 20px;">
+		<div class=" col-md-3 col-xs-3 calendar_inner_laft">
+			<div class="calendar_sub">{{eventMonth}}</div>
+			<div class="calendar_date">{{eventDate}}</div>
+		</div>
+		<div class=" col-md-9 col-xs-9" style="padding-left: 5px">
+			<div class="calendar_head">{{eventTitle}}</div>
+			<div class="calendar_sub">{{eventCenter}}</div>
+			<p class="blue">{{eventStarts_at}} at {{eventStarts_time}}</p>
+		</div>
+		<div style="clear: both"></div>
+		<div class="hr"></div>
+		<div class="calendar_sub" style="margin-top: 12px">{{eventDescription}}</div>
+	</ion-content>
+</div>
+</div>

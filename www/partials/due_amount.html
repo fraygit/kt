@@ -1,0 +1,114 @@
+<ion-header class="bar bar-header bar-balanced"> <a
+	href="#/billingMenus"
+	class="button icon-left ion-arrow-left-c button-clear "
+></a>
+<h3 style="margin-left: 1%; line-height: 0px;">Pay My Bill</h3>
+</ion-header>
+<div class="padding" ng-controller="duoAmountController">
+	<div style="height: 50px;"></div>
+	<ion-content class="content has-header ionic-pseudo">
+	<div ng-hide="hidePayBtn">
+		<div>
+			<div class="list" style="padding-top: 30px;"></div>
+		</div>
+		<div class="row adp-row">
+			<div style="text-align: right" class="col">
+				<p class="adp-caption">Center Name:</p>
+			</div>
+			<div class="col col-50">
+				<p class="hader_text">
+					<span>{{center_name}}</span>
+				</p>
+			</div>
+		</div>
+		<div class="row adp-row">
+			<div style="text-align: right" class="col">
+				<p class="adp-caption">Previous Balance:</p>
+			</div>
+			<div class="col col-50">
+				<p class="hader_text">
+					<span>{{data.previous_balance}}</span>
+				</p>
+			</div>
+		</div>
+		<div class="row adp-row">
+			<div style="text-align: right" class="col">
+				<p class="adp-caption">Previous Payments:</p>
+			</div>
+			<div class="col col-50">
+				<p class="hader_text">
+					<span>{{data.previous_payments}}</span>
+				</p>
+			</div>
+		</div>
+		<div class="row adp-row">
+			<div style="text-align: right" class="col">
+				<p class="adp-caption">Balance Forward:</p>
+			</div>
+			<div class="col col-50">
+				<p class="hader_text">
+					<span>{{data.balance_forward}}</span>
+				</p>
+			</div>
+		</div>
+		<div class="row adp-row">
+			<div style="text-align: right" class="col">
+				<p class="adp-caption">New Charges:</p>
+			</div>
+			<div class="col col-50">
+				<p class="hader_text">
+					<span>{{data.new_charges}}</span>
+				</p>
+			</div>
+		</div>
+		<div class="row adp-row">
+			<div style="text-align: right" class="col">
+				<p class="adp-caption">Recent Payments:</p>
+			</div>
+			<div class="col col-50">
+				<p class="hader_text">
+					<span>{{data.recent_payments}}</span>
+				</p>
+			</div>
+		</div>
+		<div class="row adp-row">
+			<div style="text-align: right" class="col">
+				<p class="adp-caption">{{data.cb_ad_caption}}</p>
+			</div>
+			<div class="col col-50">
+				<p class="hader_text">
+					<span style="color: #4b4d52;">{{data.cb_ad}}</span>
+				</p>
+			</div>
+		</div>
+
+		<div class="row adp-row">
+			<div style="text-align: right" class="col">
+				<p class="adp-caption">Payment Amount:</p>
+			</div>
+			<div class="col col-50">
+				<p class="dollar-sign">$</p>
+				<input type="number" class="due-amount" ng-model="data.anyAmount" >
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col col-50">
+				<button ng-disabled="PayBtnCard" class="button button-violet ach-btn" ng-click="payNowCard(data)" >Pay Now Using Card</button>
+			</div>	
+			<div class="col col-50">
+				<button ng-disabled="PayBtnAch" class="button button-violet ach-btn" ng-click="payNowAch(data)" >Pay Now Using ACH</button>			
+			</div>	
+		</div>
+		
+		
+		
+		
+	</div>
+	<div align="center" class="padding" ng-hide="!hidePayBtn">
+		<h3>{{no_Amount_Message}}</h3>
+	</div>
+</div>
+</ion-content>
+
+

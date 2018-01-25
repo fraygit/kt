@@ -1,0 +1,28 @@
+<div ng-controller="contactUsController">        
+    <div class="bar bar-header bar-balanced">
+        <a href="#/signIn" class="ion-chevron-left" style="font-size: 35px;">
+ </a>
+    </div>
+    <div style="margin-top:80px;"></div>
+    <div class="padding">
+        <h2>Get in Touch with Us</h2>
+        <form>
+            <p><label class="item item-input">
+                    <input type="text" placeholder="Enter Name" ng-model="name">
+                </label></p><br>
+            <p><label class="item item-input">
+                    <input type="tel" placeholder="Enter Phone No." ng-model="phone">
+                </label></p><br>
+            <p><label class="item item-input">
+                    <input type="email" placeholder="Enter Email Id" ng-model="email">
+                </label></p><br>
+            <p><label class="item item-input">
+                    <input type="text" placeholder="Text Your Message" ng-model="info">
+                </label></p><br>
+
+        </form>
+        <div class="padding">
+            <button class="button button-block button-positive" ng-click="submit()">Send</button>
+        </div>
+    </div>
+</div>

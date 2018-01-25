@@ -1,0 +1,108 @@
+<ion-header class="bar bar-header bar-balanced"> <a
+	href="#/listChildReport"
+	class="button icon-left ion-arrow-left-c button-clear "
+></a>
+<h3 style="margin-left: 1%; line-height: 0px;">Charge Report</h3>
+</ion-header>
+<div class="padding" ng-controller="reportViewController">
+	<div style="height: 50px;"></div>
+	<ion-content class="content has-header ionic-pseudo">
+	<div ng-hide="hideDetailView" ng-repeat="report in Reports">
+		<div>
+			<div class="list" style="padding-top: 20px;"></div>
+		</div>
+		<div class="row"
+			style="text-align: left; background-color: lightblue;" class="col"
+		>
+			<p class="hader_text">Date : {{report.date}}
+		</div>
+		<div class="row">
+			<div style="text-align: right" class="col">
+				<p class="hader_text">Debit :</p>
+			</div>
+			<div class="col col-50">
+				<p class="hader_text">
+					<span>{{report.debit}}</span>
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div style="text-align: right" class="col">
+				<p class="hader_text">Credit :</p>
+			</div>
+			<div class="col col-50">
+				<p class="hader_text">
+					<span>{{report.credit}}</span>
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div style="text-align: right" class="col">
+				<p class="hader_text">Add Amount :</p>
+			</div>
+			<div class="col col-50">
+				<p class="hader_text">
+					<span>{{report.add_amount}}</span>
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div style="text-align: right" class="col">
+				<p class="hader_text">Discount Amount :</p>
+			</div>
+			<div class="col col-50">
+				<p class="hader_text">
+					<span>{{report.discount_amount}}</span>
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div style="text-align: right" class="col">
+				<p class="hader_text">Reason :</p>
+			</div>
+			<div class="col col-50">
+				<p class="hader_text">
+					<span>{{report.reason}}</span>
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div style="text-align: right" class="col">
+				<p class="hader_text">Balance :</p>
+			</div>
+			<div class="col col-50">
+				<p class="hader_text">
+					<span>{{report.balance}}</span>
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div style="text-align: right" class="col">
+				<p class="hader_text">Transaction ID :</p>
+			</div>
+			<div class="col col-50">
+				<p class="hader_text">
+					<span>{{report.discount_amount}}</span>
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div style="text-align: right" class="col">
+				<p class="hader_text">Type :</p>
+			</div>
+			<div class="col col-50">
+				<p class="hader_text">
+					<span>{{report.type}}</span>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div align="center" class="padding" ng-hide="!hideDetailView">
+		<h3>{{no_detail_Message}}</h3>
+	</div>
+</div>
+</ion-content>
+
+
+

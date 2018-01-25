@@ -1,0 +1,22 @@
+<ion-header class="bar bar-header bar-balanced"> <!-- <button class="button button-icon icon ion-navicon"></button> -->
+<!-- <a href="#/dashboard" class="button-clear"> <i class="ion-arrow-left-c"></i> Back</a> -->
+<a href="#/dashboard"
+	class="button icon-left ion-arrow-left-c button-clear "></a>
+<h3 style="margin-left: 1%; line-height: 0px;">Parent Sign In</h3>
+</ion-header>
+<div ng-controller="CheckInPinController">
+	<div style="padding-top: 200px;"></div>
+	<h4 style="text-align: center; color: #906;">Enter PIN</h4>
+	<div class="padding input-group">
+		<span class="input-group-addon"><i class="ion-locked"
+			style="color: #fff; font-size: 30px;"></i></span>
+			<input style="height: 50px" type="tel"
+			placeholder="Enter Pin" class="form-control cip-input-pin" ng-model="data.pin"
+			autofocus="autofocus">
+		<div style="clear: both"></div>
+	</div>
+	<div align="center" class="padding">
+		<button class="button button-violet" ng-click="checkIn_Confirm(data)">Confirm</button>
+	</div>
+	</span>
+</div>

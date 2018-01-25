@@ -1,0 +1,25 @@
+<ion-header class="bar bar-header bar-balanced"> <!-- <button class="button button-icon icon ion-navicon"></button> -->
+<!-- <a href="#/dashboard" class="button-clear"> <i class="ion-arrow-left-c"></i> Back</a> -->
+<a href="#/dashboard"
+	class="button icon-left ion-arrow-left-c button-clear "
+></a>
+<h3 style="margin-left: 1%; line-height: 0px;">Billing</h3>
+</ion-header>
+<ion-content class="content has-header ionic-pseudo"
+	style="margin-top:19px" ng-controller="billingMenuController"
+>
+<button ng-click="achInformation()"
+	class="button button-full button-positive"
+>ACH Information</button>
+<button ng-click="cardInformation()"
+	class="button button-full button-positive"
+>Card Information</button>
+<button ng-click="amountDue()"
+	class="button button-full button-positive"
+>Pay My Bill</button>
+<button ng-click="amountPaid()"
+	class="button button-full button-positive"
+>Invoices</button>
+
+</ion-content>
+</span>

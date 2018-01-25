@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/***************add css on style.css ********************/
+.calendar_date{
+	font-size:48px;
+	line-height:48px;
+	font-weight:bold;
+}
+
+.calendar_head{
+	font-size:28px;
+	line-height:38px;
+}
+.calendar_sub{
+	font-size:20px;
+	line-height:22px;
+}
+.calendar_neno{
+	font-size:14px;
+	line-height:16px;	
+}
+.calendar_inner_laft{
+	min-height:80px !important; ;
+	 border-right:3px solid #dadbe3; 
+	 text-align:right !important;
+	  padding-right:10px !important; 
+	
+}
+

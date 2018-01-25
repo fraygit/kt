@@ -1,0 +1,47 @@
+<ion-header class="bar bar-header bar-balanced">
+    <!-- <button class="button button-icon icon ion-navicon"></button> -->
+    <!--<button class="button back-button button-icon icon ion-arrow-left-c button back-button button-icon icon ion-arrow-left-c" ng-click="goBack($event)" ng-class="{'hide': !backButtonEnabled}" icon="backIcon" label="backLabel" type="backType" ng-if="(backType || backLabel || backIcon)" style=""> </button> -->      
+    <a href="#/myMessages" class="button icon-left ion-arrow-left-c button-clear "></a>
+<h3 style="margin-left: 1%; line-height: 0px;">Message</h3>
+</ion-header>
+<div class="padding"  >
+	<ion-content class="content has-header ionic-pseudo" style="margin-top:8px;">
+		<div class="col-md-12 violet">
+			<div class="col-md-3 col-xs-3">
+				<a href="#/myMessages"> <i class="icon ion-social-buffer"></i> Inbox </a>
+			</div>
+			<div class="col-md-3 col-xs-3">
+				<a href="#/myMessages?MTYPE=sent"> <i class="icon ion-paper-airplane"></i> Sent </a>
+			</div>
+			<div class="col-md-3 col-xs-3">
+				<a href="#/myMessages?MTYPE=Favorite"> <i class="icon ion-android-star"></i> Favorites </a>
+			</div>
+			<div class="col-md-3 col-xs-3">
+				<a href="#/newMsg"> <i class="icon ion-compose"></i> New </a>
+			</div>
+			<div style="clear:both"></div>
+		</div>
+		<div class="col-md-12" ng-controller="messageViewController" style="padding: 10px;">
+			<h4>{{subject}}</h4>
+			<div class="col-md-6 col-xs-6">
+				<a class="reply_txt" href="#/replyMsg?SUB={{subject}}&MID={{mid}}"><i class="icon ion-arrow-left-c"></i> Reply</a>
+			</div>
+			<!--  <div class="col-md-6 col-xs-6">
+				<a ng-click="delete(mid,'Archive')"><i class="icon ion-trash-b"></i> Delete</a>
+			</div>-->
+			<div style="clear:both">
+				&nbsp;
+			</div>
+			<div>
+				<b>{{sent_by}} </b></br>
+				{{date}}
+			</div>
+			<div style="clear:both">
+				&nbsp;
+			</div>
+			<div class="message-view-content">
+				<div ng-bind-html="body"></div>
+			</div>
+		</div>
+	</ion-content>
+</div>

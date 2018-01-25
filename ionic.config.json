@@ -1,0 +1,21 @@
+{
+  "name": "kangarootime",
+  "app_id": "5a59881e",
+  "type": "ionic1",
+  "integrations": {
+    "cordova": {},
+    "gulp": {}
+  },
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "https://kangarootime.com/api"
+    }
+  ],
+  "watchPatterns": [
+    "scss/**/*",
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ]
+}

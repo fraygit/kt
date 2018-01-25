@@ -1,0 +1,15 @@
+<link href="lib/ionic/css/ionic.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<ion-header class="bar bar-header bar-balanced">
+    <a href="#/dashboard" class="button icon-left ion-arrow-left-c button-clear "></a>
+<h3 style="margin-left: 1%; line-height: 0px; color: #fff;">Gallery</h3>
+</ion-header>
+
+<ion-pane>
+	<ion-header-bar class="bar-stable"></ion-header-bar>
+	<ion-content class="has-header" ng-controller="galleryController">
+		<div style="padding: 20px 10px; overflow: hidden;">
+			<img ng-repeat="x in gallery" ng-src="{{x.thumb_img}}" ng-click="showImages($index)" class="gallery_i"/>
+		</div>
+	</ion-content>
+</ion-pane>

@@ -1,0 +1,14 @@
+<ion-header class="bar bar-header bar-balanced">
+    <!-- <button class="button button-icon icon ion-navicon"></button> -->
+    <!--<button class="button back-button button-icon icon ion-arrow-left-c button back-button button-icon icon ion-arrow-left-c" ng-click="goBack($event)" ng-class="{'hide': !backButtonEnabled}" icon="backIcon" label="backLabel" type="backType" ng-if="(backType || backLabel || backIcon)" style=""> </button> -->
+    <!-- <a href="#/gallery" class="button icon-left ion-close-circled button-clear button-light"></a> -->
+</ion-header>
+<div class="modal image-modal transparent">
+    <ion-slide-box on-slide-changed="slideChanged(gallery)" show-pager="true" active-slide="activeSlide">
+        <ion-slide ng-repeat="x in gallery">
+          <a ng-click="download(x.gallery_img)" class="button icon-right ion-android-download button-clear button-light download-button"></a>
+          <a ng-click="closeModal()" class="button icon-left ion-close-circled button-clear button-light "></a>
+            <img ng-src="{{x.gallery_img}}" class="fullscreen-image"/>
+        </ion-slide>
+    </ion-slide-box>
+</div>

@@ -1,0 +1,85 @@
+
+<ion-header class="bar bar-header bar-balanced"> <a
+	href="#/assessmentList"
+	class="button icon-left ion-arrow-left-c button-clear "
+></a>
+
+<h3 style="margin-left: 1%; line-height: 0px;">Note Details</h3>
+</ion-header>
+<div class="padding" ng-controller="AssessmentDetailController">
+	<ion-content class="content has-header ionic-pseudo">
+
+	<div class="row header" ng-hide="noDataToShow">
+		<div class="col measure-name">
+			<div class="naming-convension">
+				<h4 style="color: #006993;">{{date}}</h4>
+				<br>
+				<span ng-bind-html="description"></span></td>
+			</div>
+
+
+		</div>
+
+
+	</div>
+	<div ng-show="noDataToShow">
+		<h3>No information to show</h3>
+	</div>
+
+
+	<!-- 	<div class="row header"> --> <!-- 		<div class="col">No</div> -->
+	<!-- 		<div class="col">Name</div> --> <!-- 	</div> --> <!-- 	<div class="row" ng-repeat="assessment in assessmentChild"> -->
+	<!-- 		<div class="col">{{$index+1}}</div> --> <!-- 		<div class="col">{{assessment.child_name}}</div> -->
+	<!-- 		<div class="col"> {{assessment.description}}</div> --> <!-- 		<div class="col"> {{assessment.date}}</div> -->
+	<!-- 	</div> --> </ion-content>
+
+</div>
+
+<style>
+.col.measure-name {
+	padding: 0;
+}
+
+.naming-convension {
+	margin-top: 20px;
+	width: 100%;
+	padding: 1em;
+}
+
+.naming-convension h4 {
+	color: #000;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0;
+}
+
+.naming-convension span {
+	color: #646464;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.number-conven {
+	line-height: 30px;
+}
+
+.number-conven h3 {
+	color: #000;
+	font-size: 17px;
+	font-weight: bold;
+	margin-bottom: 6px;
+}
+
+.naming-convension td:nth-child(2) {
+	padding-left: 10px;
+}
+
+.naming-convension td:first-child {
+	width: 14px;
+}
+</style>
+
+
+
+

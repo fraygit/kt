@@ -1,0 +1,91 @@
+<ion-header class="bar bar-header bar-balanced"> <!-- <button class="button button-icon icon ion-navicon"></button> -->
+<!-- <a href="#/dashboard" class="button-clear"> <i class="ion-arrow-left-c"></i> Back</a> -->
+<a href="#/dashboard"
+	class="button icon-left ion-arrow-left-c button-clear "
+></a>
+<h3 style="margin-left: 1%; line-height: 0px; color: #fff;">Settings</h3>
+</ion-header>
+<ion-content class="content has-header ionic-pseudo" scroll="true">
+<div class="list" ng-controller="settingController">
+	<div class="padding setting"
+		style="background: #069; margin-bottom: 0px !important;"
+	>
+		<h4>Personal Information</h4>
+	</div>
+	<div class="row">
+		<div class="col col-75 margin-0">
+			<span class="item item-icon-left"> <i class="icon ion-person"></i>
+				{{user_name}}<span class="item-note"> </span>
+			</span> <span class="item item-icon-left"> <i class="icon ion-email"></i>{{user_email}}<span
+				class="item-note"
+			> </span>
+			</span>
+		</div>
+		<div class="col">
+			<a style="border-top: none; position: relative;"
+				class="item item-avatars"
+			> <img ng-src="{{parentImage}}"></a>
+		</div>
+	</div>
+	<div style="clear: both"></div>
+	<div class="padding setting"
+		style="background: #069; margin-bottom: 0px !important;"
+		ng-hide="hide_Child"
+	>
+		<h4>Guardians</h4>
+	</div>
+	<a href="#/CreateChild" ng-hide="true"
+		class="item item-icon-left item-icon-right" ng-hide="hide_Child"
+	> <i class="icon ion-plus-round"></i> Add Child <span
+		class="item-note"
+	> <i class="icon ion-chevron-right"></i>
+	</span>
+	</a> <a href="#/RelationshipProfile"
+		class="item item-icon-left item-icon-right" ng-hide="hide_Child"
+	> <i class="icon ion-person-stalker"></i> Add Guardian <span
+		class="item-note"
+	> <i class="icon ion-chevron-right"></i>
+	</span>
+	</a> <a href="#/SetPrivilege" class="item item-icon-left item-icon-right"
+		ng-hide="hide_Child"
+	> <i class="icon ion-person-add"></i> Edit Guardian Privileges <span
+		class="item-note"
+	> <i class="icon ion-chevron-right"></i>
+	</span>
+	</a>
+
+	<div class="padding setting"
+		style="background: #069; margin-bottom: 0px !important;"
+	>
+		<h4>Security</h4>
+	</div>
+
+	<a href="#/ChangePassword" class="item item-icon-left item-icon-right">
+		<i class="icon ion-unlocked"></i> Change Password <span
+		class="item-note"
+	> <i class="icon ion-chevron-right"></i>
+	</span>
+	</a>
+	<div ng-hide=true>
+		<div class="padding setting"
+			style="background: #069; margin-bottom: 0px !important;"
+		>
+			<h4>Social Network</h4>
+		</div>
+		<a href="#" class="item item-icon-left item-icon-right"> <i
+			class="icon ion-social-facebook"
+		></i> Facebook Connect <span class="item-note"> <i
+				class="icon ion-chevron-right"
+			></i>
+		</span>
+		</a> <a href="#" class="item item-icon-left item-icon-right"> <i
+			class="icon ion-social-twitter"
+		></i> Twitter Connect <span class="item-note"> <i
+				class="icon ion-chevron-right"
+			></i>
+		</span>
+		</a>
+	</div>
+</div>
+<div style="clear: both">&nbsp;</div>
+</ion-content>

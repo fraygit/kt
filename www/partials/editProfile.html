@@ -1,0 +1,105 @@
+<ion-header class="bar bar-header bar-balanced"> <a
+	href="#/dashboard"
+	class="button icon-left ion-arrow-left-c button-clear "
+></a>
+<h3 style="margin-left: 1%; line-height: 0px;">Profile</h3>
+</ion-header>
+<div class="padding">
+	<ion-content class="content has-header ionic-pseudo">
+	<div ng-controller="profileController">
+
+		<div class="list">
+			<!-- 			<a ng-click="editUserProfile()" -->
+			<a style="border-top: none; position: relative;"
+				class="item item-avatars"
+			> <img ng-src="{{parentImage}}">
+				<h2 style="font-weight: bold; font-size: 18px; margin-top: 10px;">{{parentName}}</h2>
+				<p>{{parentAddress}}</p>
+			</a>
+			<div class="row"
+				style="background: none repeat scroll 0 0 #eeeff0; border-bottom: 1px solid #ddd;"
+			>
+				<!--<div class="col col-33 ">
+					<div class="col-demo chat"></div>
+					</div>-->
+				<div class="col col-50">
+					<a href="#/gallery">
+						<div class="col-demo gallery"></div>
+					</a>
+				</div>
+				<div class="col col-50">
+					<a href="#/myMessages"><div class="col-demo mail">
+							<span class="badge badge-assertive">{{msgcount}}</span>
+						</div></a>
+					<div style="clear: both;"></div>
+				</div>
+			</div>
+
+			<h4 ng-hide="check" style="text-align: center; margin-top: 30px;">You haven't received any notes today.</h4>
+
+			<div ng-show="check" class="item-icon-left item-icon-right"
+				style="position: relative; bottom: -75px; z-index: 9999; display: block;"
+			>
+				<i class="icon ion-chevron-left" ng-click="slidePrevious()"
+					style="color: #999;"
+				></i> <span class="item-note"> <i class="icon ion-chevron-right"
+					ng-click="slideNext()" style="color: #999;"
+				></i>
+				</span>
+			</div>
+
+			<!-- <div style="height:150px;"></div> -->
+		</div>
+		<div ng-show="check">
+			<ion-slide-box does-continue="true"> <!-- Slide page one -->
+			<!-- <div > --> <ion-slide ng-repeat="x in profileList">
+			<div class="row">
+				<div class="item-icon-left item-icon-right">
+					<div style="border: 0px" class="item item-avatart">
+						<img ng-src="{{x.image}}">
+						<h2 style="font-weight: bold; font-size: 16px">{{x.first_name
+							}}</h2>
+						<h6 style="font-size: 14px; color: #006993;">Status:
+							{{x.status}}</h6>
+						<p style="font-size: 12px; margin-bottom: 0;">
+							<!-- Back off, man. I'm a scientist. -->
+							{{x.sdate}}
+						</p>
+						<p style="font-size: 12px; margin-bottom: 0;">
+							<!-- Back off, man. I'm a scientist. -->
+							{{x.stime}}
+						</p>
+						<p style="font-size: 12px;">
+							<!-- Back off, man. I'm a scientist. -->
+							{{x.checkedOut}}
+						</p>
+						
+					</div>
+				</div>
+			</div>
+
+			<div class="hader">
+				<div style="text-align: center">
+					<p style="font-size: 13px;">
+						<span style="color: #006693;">Daily Note :</span><span
+							style="margin-left: 5px;"
+						>{{x.asdate}}</span>
+					</p>
+				</div>
+				<div style="text-align: center" ng-hide="true">
+					<button class="button button-dark" ng-click="editChild(x)">Edit
+						Child</button>
+				</div>
+				<div class="padding">
+					<div class="padding" style="background: #fff; margin: 15px 0;" ng-show="x.assessment_details" ng-bind-html="x.assessment_details"></div>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
+		</div>
+		</ion-slide>
+		</ion-slide-box>
+	</div>
+</div>
+</ion-content>
+
+</div>

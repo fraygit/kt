@@ -1,0 +1,162 @@
+<ion-header class="bar bar-header bar-balanced"> <a
+	href="#/signIn" class="button icon-left ion-arrow-left-c button-clear "
+></a>
+<h3 style="margin-left: 1%; line-height: 0px;">Create an Account</h3>
+</ion-header>
+<div class="padding">
+
+	<ion-content class="content has-header ionic-pseudo">
+	<div style="padding-top: 30px;">
+		<div class="signUp"></div>
+		<div ng-controller="signUpController">
+			<div class="row">
+				<div class="col col-75">
+					<h3 class="blue">Childcare Center</h3>
+					<h3 class="ash">Child Care Institution</h3>
+				</div>
+				<div class="col">
+					<div class="list" style="margin: -20px">
+						<a ng-click="getImageSaveContact(data)" style="border: none;"
+							class="item item-avatars"
+						> <img src="{{parentImage}}" width="200" height="200">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+
+					<h3 class="blue">Create an Account</h3>
+				</div>
+			</div>
+			<div class="row" ng-hide='true'>
+				<div class="col">
+					<a
+						onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-facebook']);"
+						class="btn btn-block btn-social btn-facebook"
+					> <i class="fa fa-facebook"></i> Sign in with Facebook
+					</a>
+				</div>
+				<div class="col">
+					<a
+						onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-google']);"
+						class="btn btn-block btn-social btn-google"
+					> <i class="fa fa-google-plus"></i> Sign in with Google
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<label class="item item-input"> <input type="text"
+						ng-model="data.name" placeholder="Name * "
+					>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<label class="item item-input"> <input type="tel"
+						name="phone" ng-model="data.phone" placeholder="Phone Number * "
+					>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<label class="item item-input"> <input type="text"
+						ng-model="data.address1" placeholder="Address 1 * "
+					>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<label class="item item-input"> <input type="text"
+						ng-model="data.address2" placeholder="Address 2"
+					>
+					</label>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col col-75">
+					<label class="item item-input"> <input type="text"
+						ng-model="data.city" placeholder="City * "
+					>
+					</label>
+				</div>
+
+				<div class="col">
+					<label class="item item-input"> <input type="text"
+						ng-model="data.state" placeholder="State * "
+					>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<label class="item item-input"> <input type="tel"
+						ng-model="data.zip" placeholder="Zip * "
+					>
+					</label>
+				</div>
+				<div class="col">
+					<label class="item item-input"> <input type="text"
+						ng-model="data.country" placeholder="Country "
+					>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<label class="item item-input"> <input type="text"
+						ng-model="data.email" name="email" placeholder="Email Address * "
+					>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<label class="item item-input"> <input type="password"
+						name="passowrd" ng-model="data.password"
+						placeholder="Password  * "
+					>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<label class="item item-input"> <input type="password"
+						ng-model="data.confirm_password" placeholder="Confirm Password * "
+					>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<label class="item item-input"> <input type="tel"
+						ng-model="data.checkin_status" placeholder="Check In/Out Pin  *  "
+					>
+					</label>
+				</div>
+			</div>
+			<div class="padding">* Indicates Mandatory Field</div>
+			<div align="center">
+				<input class="operation-search" type="checkbox"
+					ng-model="data.terms_conditions"
+				> <span style="padding-left: 10px;">I agree to Kangarootime
+					<span class="blue"> Terms of Service </span> and <span class="blue">
+						Privacy Policy</span>
+				</span>
+			</div>
+
+			<!-- 			<button class="button button-full button-positive" -->
+			<!-- 				ng-click="getImageSaveContact(data)">Load Image</button> -->
+			<div align="center" class="padding">
+				<button class="button button-violet" ng-click="SignUp(data)">Sign
+					Up</button>
+			</div>
+
+
+		</div>
+	</div>

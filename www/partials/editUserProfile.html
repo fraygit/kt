@@ -1,0 +1,98 @@
+<ion-header class="bar bar-header bar-balanced"> <a
+	href="#/dashboard"
+	class="button icon-left ion-arrow-left-c button-clear "
+></a>
+<h3 style="margin-left: 1%; line-height: 0px;">Edit Profile</h3>
+</ion-header>
+<div class="padding">
+	<ion-content class="content has-header ionic-pseudo">
+	<div ng-controller="editprofileController">
+
+		<div class="list">
+			<a ng-click="getImage(data)" style="border: none;"
+				class="item item-avatars"
+			> <img src="{{parentImage}}" width="200" height="200">
+				<h2 style="font-weight: bold; font-size: 18px; margin-top: 10px;">{{parentName}}</h2>
+				<!-- 				<h6>Mother</h6> -->
+				<p>{{parentAddress}}</p>
+			</a>
+		</div>
+		<div class="row">
+			<div class="col">
+				<h3 class="blue">Profile</h3>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<label class="item item-input"> <input type="text"
+					ng-model="data.name" placeholder="Name * "
+				>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<label class="item item-input"> <input type="tel"
+					name="phone" ng-model="data.phone" placeholder="Phone Number * "
+				>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<label class="item item-input"> <input type="text"
+					ng-model="data.address1" placeholder="Address 1 * "
+				>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<label class="item item-input"> <input type="text"
+					ng-model="data.address2" placeholder="Address 2"
+				>
+				</label>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col col-75">
+				<label class="item item-input"> <input type="text"
+					ng-model="data.city" placeholder="City * "
+				>
+				</label>
+			</div>
+
+			<div class="col">
+				<label class="item item-input"> <input type="text"
+					ng-model="data.state" placeholder="State * "
+				>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<label class="item item-input"> <input type="tel"
+					ng-model="data.zip" placeholder="Zip * "
+				>
+				</label>
+			</div>
+			<div class="col">
+				<label class="item item-input"> <input type="text"
+					ng-model="data.country" placeholder="Country "
+				>
+				</label>
+			</div>
+		</div>
+		<div class="padding">* Indicates Mandatory Field</div>
+
+		<div align="center" class="padding">
+			<button class="button button-violet" ng-click="profileUpdate(data)">Update</button>
+		</div>
+	</div>
+</div>
+
+
+
+

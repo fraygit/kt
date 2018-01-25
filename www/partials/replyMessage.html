@@ -1,0 +1,35 @@
+<ion-header class="bar bar-header bar-balanced"> <!-- <button class="button button-icon icon ion-navicon"></button> -->
+<!--<button class="button back-button button-icon icon ion-arrow-left-c button back-button button-icon icon ion-arrow-left-c" ng-click="goBack($event)" ng-class="{'hide': !backButtonEnabled}" icon="backIcon" label="backLabel" type="backType" ng-if="(backType || backLabel || backIcon)" style=""> </button> -->
+<a href="#/myMessages"
+	class="button icon-left ion-arrow-left-c button-clear "
+></a>
+<h3 style="margin-left: 1%; line-height: 0px;">Reply Message</h3>
+</ion-header>
+
+<div class="padding">
+	<ion-content class="content has-header ionic-pseudo"
+		style="margin-top:19px"
+	>
+	<div ng-controller="replyMsgController">
+		<form>
+			<div class="list">
+				<label class="item item-input"> Re: &nbsp; <input
+					type="text" placeholder="Subject" ng-model="subject"
+				>
+				</label> <label class="item item-input"> <textarea
+						placeholder="Message" ng-model="body"
+						style="height: 100px; background: transparent;"
+					></textarea>
+				</label>
+			</div>
+			<div class="padding">
+				<button class="button button-block button-positive"
+					ng-click="submit()"
+				>Send</button>
+			</div>
+		</form>
+	</div>
+	</ion-content>
+</div>
+<div style="clear: both"></div>
+

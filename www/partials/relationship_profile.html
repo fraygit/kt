@@ -1,0 +1,70 @@
+<ion-header class="bar bar-header bar-balanced"> <a
+	href="#/settings"
+	class="button icon-left ion-arrow-left-c button-clear "
+></a>
+<h3 style="margin-left: 1%; line-height: 0px;">Add Guardian</h3>
+</ion-header>
+<div class="padding">
+
+	<ion-content class="content has-header ionic-pseudo">
+	<div ng-controller="relationShipController" style="padding-top: 25px;">
+
+		<div class="row">
+			<div class="col">
+				<label class="item item-input"> <input type="text"
+					ng-model="data.parent_invitation.invite_parent_email"
+					placeholder="Guardian Email Address"
+				>
+				</label>
+			</div>
+		</div>
+
+		<!-- <span class="rp-caption">Family Privileges</span>
+		<div class="row">
+	      <div class="col">
+	        <ion-checkbox name="" type="checkbox" ng-model="data.parent_invitation.messages">
+	          Messages
+	        </ion-checkbox>
+	      </div>
+	      <div class="col">
+	        <ion-checkbox name="" type="checkbox" ng-model="data.parent_invitation.calendar">
+	          Calendar
+	        </ion-checkbox>
+	      </div>
+	      <div class="col">
+	        <ion-checkbox name="" type="checkbox" ng-model="data.parent_invitation.gallery">
+	          Gallery
+	        </ion-checkbox>
+	      </div>
+	    </div>
+	    <span class="rp-caption">Child Privileges</span>
+	    <ion-list class="children-privileges">
+	      <ion-item ng-repeat="child_privilege in children" class="row">
+	        <div class="col col-20">
+	          <ion-avatar item-left>
+	            <img class="item-avatar-small" ng-src="{{child_privilege.avatar_url}}" class="item-avatar-small"/>
+	          </ion-avatar>
+	          <h2 class="child-privilege-name">{{child_privilege.first_name}}</h2>
+	        </div>
+	        <div class="col">
+	          <ion-checkbox name="" type="checkbox" ng-model="data.child_privilege_attributes[$index].notes">
+	            Notes
+	          </ion-checkbox>
+	          <ion-checkbox name="" type="checkbox" ng-model="data.child_privilege_attributes[$index].checkin">
+	            Check in/out
+	          </ion-checkbox>
+	        </div>
+	        <div class="col">
+	          <ion-checkbox name="" type="checkbox" ng-model="data.child_privilege_attributes[$index].billing">
+	            Billing
+	          </ion-checkbox>
+	        </div>
+	      </ion-item>
+	    </ion-list> -->
+
+		<div align="center" class="padding">
+			<button class="button button-violet" ng-click="btnRelationship(data)">Invite</button>
+		</div>
+
+	</div>
+</div>

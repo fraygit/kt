@@ -1,0 +1,24 @@
+<ion-header class="bar bar-header bar-balanced"> <!-- <button class="button button-icon icon ion-navicon"></button> -->
+<!-- <a href="#/dashboard" class="button-clear"> <i class="ion-arrow-left-c"></i> Back</a> -->
+<a href="#/signIn"
+	class="button icon-left ion-arrow-left-c button-clear "></a>
+<h3 style="margin-left: 1%; line-height: 0px;">Center Verification</h3>
+</ion-header>
+<div ng-controller="centerCodeVerifiedController">
+	<div style="padding-top: 200px;"></div>
+	<h4 style="text-align: center; color: #906;">Center Verification
+		Code</h4>
+	<div class="padding input-group">
+
+		<span class="input-group-addon"><i class="ion-email"
+			style="color: #fff; font-size: 30px;"></i></span> <input name="centercode"
+			ng-model="data.centercode" style="height: 50px" type="text"
+			placeholder="Enter Center Code" class="form-control"
+			autofocus="autofocus">
+		<div style="clear: both"></div>
+	</div>
+	<div align="center" class="padding">
+		<button class="button button-violet"
+			ng-click="centerCodeVerified(data)">Confirm</button>
+	</div>
+	</span>

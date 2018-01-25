@@ -1,0 +1,89 @@
+<ion-header class="bar bar-header bar-balanced transperent">
+<!-- <div class="btn-group">
+	<button class="button button-icon icon ion-navicon dropdown-toggle"></button>
+	<ul id="menu-profile" class="dropdown-menu" role="menu" >
+	<li>
+	<a href="#/whyKangaroo">Why Kangaroo</a>
+	</li>
+	<li>
+	<a href="#/dayCare">Day Care</a>
+	</li>
+	<li>
+	<a href="#/parents">Parents</a>
+	</li>
+	<li>
+	<a href="#/whatWeDo">What We Do</a>
+	</li>
+	<li>
+	<a href="#/signIn">Sign In</a>
+	</li>
+	<li>
+	<a href="#/signUp">Sign Up</a>
+	</li>
+	<li>
+	<a href="#/contactUs">Contact Us</a>
+	</li>
+
+	</ul>
+	</div> -->
+
+
+	</ion-header>
+<div style="margin-top: 60px"></div>
+<ion-content class="content has-header ionic-pseudo"
+	style="margin-top:19px">
+
+
+
+<div class="padding">
+	<div class="signin"></div>
+	<div ng-controller="signInController">
+		<ng-form name="signInFieldForm">
+		<div class="padding input-group">
+			<span class="input-group-addon"><i class="ion-person"
+				style="color: #fff; font-size: 20px;"
+			></i></span> <input name="email" type="text" placeholder="Enter Email"
+				class="form-control" ng-model="data.email" autofocus="autofocus"
+			>
+			<div style="clear: both"></div>
+		</div>
+		<div class="padding input-group" style="margin: 25px 0px;">
+			<span class="input-group-addon"><i class="ion-locked"
+				style="color: #fff; font-size: 20px;"
+			></i></span> <input type="password" name="passowrd" ng-model="data.password"
+				placeholder="Enter Password" class="form-control"
+			>
+			<div style="clear: both"></div>
+		</div>
+		<div class="padding">
+			<button class="button button-block button-positive"
+				ng-click="submit(data)"
+			>Sign In</button>
+		</div>
+<!-- 		<div class="row" style="padding: 0 10%">
+			<div class="col col-50" ng-click="loginFB()">
+				<div class="col-demo facebook">ng-click="login()" .col</div>
+			</div>
+
+			<div class="col col-50" ng-click="loginGoogle()">
+				<div class="col-demo google">.col</div>
+			</div>
+		</div>
+		<div class="padding sign-up-padding" ng-hide="true">
+			<p style="float: left">
+				<a href="#/centerCodeVerified">Sign up</a>
+			</p>
+			<p style="float: right">
+				<a href="#">Help</a>
+			</p>
+		</div> -->
+		</ng-form>
+	</div>
+</div>
+
+
+
+
+
+
+</ion-content>

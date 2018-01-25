@@ -1,0 +1,106 @@
+
+<ion-header class="bar bar-header bar-balanced"> <a
+	href="#/assessmentChild"
+	class="button icon-left ion-arrow-left-c button-clear "
+></a>
+
+<h3 style="margin-left: 1%; line-height: 0px;">Notes</h3>
+</ion-header>
+
+
+<div class="padding" ng-controller="AssessmentsList">
+	<ion-content class="content has-header ionic-pseudo">
+
+	<div class="row header" ng-hide="noDataToShow"
+		ng-repeat="assessment in assignList"
+	>
+		<div class="col measure-name" ng-click="showAssessment(assessment)">
+			<table class="naming-convension">
+				<tr>
+					<td><h4 style="color: #006993;">{{$index+1}}.</h4></td>
+					<td><p>
+							<strong style="color: #006993;">{{assessment.child_name}}</strong>
+						</p></td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td><p>{{assessment.date}}</p></td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td><p>{{assessment.description}}	</p></td>
+				</tr>
+				<tr>
+					<hr>
+				</tr>
+			</table>
+		</div>
+
+	</div>
+	<div class="row header"
+		ng-repeat="values in value"
+	>
+	<h1>{{values.name}}</h1>
+	
+	</div>
+	
+	<div ng-show="noDataToShow">
+		<h3>No information to show</h3>
+	</div>
+
+
+	<!-- 	<div class="row header"> --> <!-- 		<div class="col">No</div> -->
+	<!-- 		<div class="col">Name</div> --> <!-- 	</div> --> <!-- 	<div class="row" ng-repeat="assessment in assessmentChild"> -->
+	<!-- 		<div class="col">{{$index+1}}</div> --> <!-- 		<div class="col">{{assessment.child_name}}</div> -->
+	<!-- 		<div class="col"> {{assessment.description}}</div> --> <!-- 		<div class="col"> {{assessment.date}}</div> -->
+	<!-- 	</div> --> </ion-content>
+
+</div>
+
+<style>
+.col.measure-name {
+	padding: 0;
+}
+
+table.naming-convension {
+	margin-top: 20px;
+	width: 100%;
+}
+
+.naming-convension td h4 {
+	color: #000;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0;
+}
+
+.naming-convension td p {
+	color: #646464;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.number-conven {
+	line-height: 30px;
+}
+
+.number-conven h3 {
+	color: #000;
+	font-size: 17px;
+	font-weight: bold;
+	margin-bottom: 6px;
+}
+
+.naming-convension td:nth-child(2) {
+	padding-left: 10px;
+}
+
+.naming-convension td:first-child {
+	width: 14px;
+}
+</style>
+
+
+
+

@@ -1,0 +1,93 @@
+<ion-header class="bar bar-header bar-balanced"> <!-- <button class="button button-icon icon ion-navicon"></button> -->
+<!-- <a href="#/dashboard" class="button-clear"> <i class="ion-arrow-left-c"></i> Back</a> -->
+<a href="#/dashboard"
+	class="button icon-left ion-arrow-left-c button-clear "></a>
+<h3 style="margin-left: 1%; line-height: 0px;">Billing</h3>
+</ion-header>
+<h4>Billing</h4>
+<div ng-controller="billingController">
+	<ul class="cards">
+		<li><img border="0" src="../img/visa.gif" width="44" height="28"
+			hspace="3"></li>
+		<li><img border="0" src="../img/mastercard.gif" width="44"
+			height="28" hspace="3"></li>
+		<li><img border="0" src="../img/amex.gif" width="44" height="28"
+			hspace="3"></li>
+		<li><img border="0" src="../img/discover.gif" width="44"
+			height="28" hspace="3"></li>
+		<li><img border="0" src="../img/diners.gif" width="44"
+			height="28" hspace="3"></li>
+		<li><img border="0" src="../img/jcb.gif" width="44" height="28"
+			hspace="3"></li>
+	</ul>
+	<form class="list billing-form" name="epayform"
+		action="https://sandbox.axiaepay.com/interface/epayform/_Qb5yOydy7srfjszLqArlSrC31ObFb1n"
+		method="POST" ng-submit="submit(data)"
+		onSubmit="document.epayform.submitbutton.value='Please Wait... Processing';"
+		autocomplete="off">
+		<input type="hidden" name="UMsubmit" value="1"
+			ng-model="data.UMsubmit"> <input type="hidden" name="UMkey"
+			value="_Qb5yOydy7srfjszLqArlSrC31ObFb1n" ng-model="data.UMkey">
+		<input type="hidden" name="UMredirDeclined"
+			value="http://testing.kangarootime.com/save_billing_info"
+			ng-model="data.UMredirDeclined"> <input type="hidden"
+			name="UMredirApproved" value="http://testing.kangarootime.com/save_billing_info"
+			ng-model="data.UMredirApproved"> <input type="hidden"
+			name="UMhash" value="s/{{seed_value}}/{{hash_value}}/y"
+			ng-model="data.UMhash"> <input type="hidden" name="UMcommand"
+			value="cc:save" ng-model="data.UMredirDeclined"> <input
+			type="hidden" name="UMamount" value="" ng-model="data.UMamount">
+		<input type="hidden" name="UMtax" value="" ng-model="data.UMtax">
+		<input type="hidden" name="UMinvoice" value="12345"
+			ng-model="data.UMinvoice"> <input type="hidden"
+			name="UMcustid" value="" ng-model="data.UMcustid"> <input
+			type="hidden" name="UMrecurring" value="" ng-model="data.UMrecurring">
+		<input type="hidden" name="UMaddcustomer" value=""
+			ng-model="data.UMaddcustomer"> <input type="hidden"
+			name="UMbillamount" value="" ng-model="data.UMbillamount"> <input
+			type="hidden" name="UMcustreceipt" value=""
+			ng-model="data.UMcustreceipt"> <input type="hidden"
+			name="UMschedule" value="" ng-model="data.UMschedule"> <input
+			type="hidden" name="UMnumleft" value="" ng-model="data.UMnumleft">
+		<input type="hidden" name="UMstart" value="" ng-model="data.UMstart">
+		<input type="hidden" name="UMexpire" value="" ng-model="data.UMexpire">
+		<input type="hidden" name="UMdescription" value=""
+			ng-model="data.UMdescription"> <input type="hidden"
+			name="UMechofields" value="all" ng-model="data.UMechofields">
+		<input type="hidden" name="UMformString" value="a:0:{}"
+			ng-model="data.UMformString"> <input type="hidden"
+			name="UMsaveCard" value="true" ng-model="data.UMsaveCard"> <label
+			class="item item-input item-select">
+			<div class="input-label">Card Type</div> <select name="payment_type"
+			size="1" ng-model="data.payment_type">
+				<option value="Visa">Visa</option>
+				<option value="MasterCard">MasterCard</option>
+				<option value="American Express">American Express</option>
+				<option value="Discover">Discover</option>
+				<option value="JCB">JCB</option>
+				<option value="Diners">Diners</option>
+		</select>
+		</label> <label class="item item-input item-stacked-label"> <span
+			class="input-label">Card Number</span> <input type="text"
+			name="UMcard" placeholder="Enter your 16 digits card number"
+			ng-model="data.UMcard">
+
+		</label> <label class="item item-input item-stacked-label"> <span
+			class="input-label">Card Expiration Date</span> <input type="text"
+			name="UMexpir" placeholder="MMYY" ng-model="data.UMexpir">
+
+		</label> <label class="item item-input item-stacked-label"> <span
+			class="input-label">Card ID (CVV2/CID) Number: <br> <a
+				class="card-id" href="#">[What is the Card ID?]</a></span> <input
+			type="text" placeholder="CVV2/CID Number" name="UMcvv2"
+			ng-model="data.UMcvv2">
+
+		</label> <input class="button button-block button-positive" type="submit"
+			name="submitbutton" value="Process Payment &gt;&gt;">
+
+		<!-- 			<button class="button button-block button-positive" type="submit" -->
+		<!-- 				name="submitbutton" value="Process Payment &gt;&gt;"></button> -->
+
+	</form>
+</div>
+</span>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<meta name="format-detection" content="telephone=no">
+<title></title>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+<style>
+body{
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+}
+ul.cards {
+  background: #c4c7d4 none repeat scroll 0 0;
+  margin: 0;
+  padding: 20px 0 13px;
+  text-align: center;
+  width: 100%;
+}
+form.list.billing-form {
+  padding: 10px;
+}
+ul.cards li {
+	display: inline-block;
+	width: auto;
+}
+
+.item.item-input.item-stacked-label {
+	background: #fff;
+}
+
+a.card-id {
+	font-size: 11px;
+	color: #7b3c84;
+}
+
+.billing-form *::-moz-placeholder {
+  color: #646464 !important;
+}
+.item.item-input.item-stacked-label > input {
+  background: #f7f7f7 none repeat scroll 0 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 13px;
+  height: 32px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  width: 96%;
+}
+.item.item-input.item-select select {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #646464;
+  font-size: 13px;
+  height: 36px;
+  margin-bottom: 10px;
+  padding-left: 6px;
+  width: 100%;
+}
+.item.item-input.item-select select option{
+  padding: 10px;
+}
+.input-label {
+  color: #646464;
+  display: inline-block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  width: 100% !important;
+}
+.button.button-block.button-positive {
+  background: #7b3c84 none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 4px;
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  margin-top:5px 10px;
+}
+
+
+
+
+
+
+
+
+</style>
+<body>
+	<div ng-controller="billingController">
+		<div class="padding">
+			<ul class="cards">
+				<li><img border="0" src="/img/visa.gif" width="44" height="28"
+					hspace="3"></li>
+				<li><img border="0" src="/img/mastercard.gif" width="44"
+					height="28" hspace="3"></li>
+				<li><img border="0" src="/img/amex.gif" width="44" height="28"
+					hspace="3"></li>
+				<li><img border="0" src="/img/discover.gif" width="44"
+					height="28" hspace="3"></li>
+				<li><img border="0" src="/img/diners.gif" width="44"
+					height="28" hspace="3"></li>
+				<li><img border="0" src="/img/jcb.gif" width="44" height="28"
+					hspace="3"></li>
+			</ul>
+			<form class="list billing-form" name="epayform"
+			action="https://sandbox.axiaepay.com/interface/epayform/_Qb5yOydy7srfjszLqArlSrC31ObFb1n"
+			method="POST"
+			onSubmit="document.epayform.submitbutton.value='Please Wait... Processing';"
+			autocomplete="off">
+			<input type="hidden" name="UMsubmit" value="1"> <input
+				type="hidden" name="UMkey" value="_Qb5yOydy7srfjszLqArlSrC31ObFb1n">
+			<input type="hidden" name="UMredirDeclined"
+				value="http://kangarootime.com/api/v1/save_ach_details?parent_id=&center_id="> <input
+				type="hidden" name="UMredirApproved"
+				value="http://kangarootime.com/api/v1/save_ach_details?parent_id=&center_id="> <input
+				type="hidden" name="UMhash"
+				value="s/1447393645.9184809/73ad25eaa4eac4880aba19c249d223dd47109661/y">
+			<input type="hidden" name="UMcommand" value="cc:save"> <input
+				type="hidden" name="UMamount" value=""> <input type="hidden"
+				name="UMtax" value=""> <input type="hidden" name="UMinvoice"
+				value="12345"> <input type="hidden" name="UMcustid" value="">
+			<input type="hidden" name="UMrecurring" value=""> <input
+				type="hidden" name="UMaddcustomer" value=""> <input
+				type="hidden" name="UMbillamount" value=""> <input
+				type="hidden" name="UMcustreceipt" value=""> <input
+				type="hidden" name="UMschedule" value=""> <input
+				type="hidden" name="UMnumleft" value=""> <input
+				type="hidden" name="UMstart" value=""> <input type="hidden"
+				name="UMexpire" value=""> <input type="hidden"
+				name="UMdescription" value=""> <input type="hidden"
+				name="UMechofields" value="all"> <input type="hidden"
+				name="UMformString" value="a:0:{}"> <input type="hidden"
+				name="UMsaveCard" value="true"> <label
+				class="item item-input item-select">
+				<div class="input-label">Card Type</div> <select name="payment_type"
+				size="1">
+					<option value="Visa">Visa</option>
+					<option value="MasterCard">MasterCard</option>
+					<option value="American Express">American Express</option>
+					<option value="Discover">Discover</option>
+					<option value="JCB">JCB</option>
+					<option value="Diners">Diners</option>
+			</select>
+			</label> <label class="item item-input item-stacked-label"> <span
+				class="input-label">Card Number</span> <input type="text"
+				name="UMcard" placeholder="Enter your 16 digits card number">
+			</label> <label class="item item-input item-stacked-label"> <span
+				class="input-label">Card Expiration Date</span> <input type="text"
+				name="UMexpir" placeholder="MMYY">
+			</label> <label class="item item-input item-stacked-label"> <span
+				class="input-label">Card ID (CVV2/CID) Number: <br> <a
+					class="card-id" href="#">[What is the Card ID?]</a></span> <input
+				type="text" placeholder="CVV2/CID Number" name="UMcvv2">
+			</label> <input class="button button-block button-positive" type="submit"
+				name="submitbutton" value="Process Payment &gt;&gt;">
+			<!-- 			<button class="button button-block button-positive" type="submit" -->
+			<!-- 				name="submitbutton" value="Process Payment &gt;&gt;"></button> -->
+
+		</form>
+		</div>
+
+	</div>
+</body>
+</html>

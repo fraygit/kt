@@ -1,0 +1,41 @@
+<ion-header class="bar bar-header bar-balanced"> <!-- <button class="button button-icon icon ion-navicon"></button> -->
+<!-- <a href="#/dashboard" class="button-clear"> <i class="ion-arrow-left-c"></i> Back</a> -->
+<a href="#/dashboard"
+	class="button icon-left ion-arrow-left-c button-clear "
+></a>
+<h3 style="margin-left: 1%; line-height: 0px;">Check Out</h3>
+</ion-header>
+<ion-content scroll="true">
+<div ng-controller="CheckOutController">
+	<div ng-repeat="child in checkInList">
+		<div style="padding-top: 100px;"></div>
+		<div class="col">
+			<div class="col-md-4 col-xs-4">
+				<a href="#" style="border: none" class="item item-avatars"> <img
+					ng-src={{child.image.tiny.url}}
+				>
+				</a>
+			</div>
+			<div class="col-md-8 col-xs-8">
+				<div class="blue">
+					Are you here to pick up <b>{{child.first_name}}</b> <b>{{child.last_name}}</b>?
+				</div>
+				<div style="clear: both; height: 12px;"></div>
+				<div class="col-mb-6 col-xs-6">
+					<button class="button button-violet" ng-disabled="!child.checkin"
+						ng-click="check_out_yes(child,$index)"
+					>Yes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="clear: both; height: 25px"></div>
+	<div align="center">
+		<button class="button button-violet" ng-click="btn_done()">
+			<h3>Done</h3>
+		</button>
+	</div>
+
+	</span>
+</div>
+</ion-content>

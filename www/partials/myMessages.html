@@ -1,0 +1,69 @@
+<ion-header class="bar bar-header bar-balanced">
+	<a href="#/dashboard" class="button icon-left ion-arrow-left-c button-clear "></a>
+	<h3 style="margin-left: 1%; line-height: 0px;">Messages</h3>
+</ion-header>
+
+<div class="padding" >
+	<ion-content class="content has-header ionic-pseudo" style="margin-top:8px">
+		<div class="col-md-12 violet">
+			<div class="col-md-3 col-xs-3">
+				<a href="#/myMessages"> <i class="icon ion-social-buffer"></i> Inbox </a>
+			</div>
+			<div class="col-md-3 col-xs-3">
+				<a href="#/myMessages?MTYPE=sent"> <i class="icon ion-paper-airplane"></i> Sent </a>
+			</div>
+			<div class="col-md-3 col-xs-3">
+				<a href="#/myMessages?MTYPE=Favorite"> <i class="icon ion-android-star"></i> Favorites </a>
+			</div>
+			<div class="col-md-3 col-xs-3">
+				<a href="#/newMsg"> <i class="icon ion-compose"></i> New </a>
+			</div>
+			<div style="clear:both"></div>
+		</div>
+
+		<div class="message-list" ng-controller="messageController">
+			<ul class="message-group-list">
+				<li class="message-group-item-list" ng-repeat="x in allmsg" ng-class="{'message-group-item-list' : x.mob_color_select == false, 'message-group-item-list message-active' : x.mob_color_select == true}" >
+
+					<div class="col-xs-1 padding-left-0" ng-if="x.p_favorite == false">
+						<a href="" ng-click="favorite(x.msgcode,'Favourite')" > <i class="icon ion-android-star"></i> </a>
+					</div>
+					<div class="col-xs-1 padding-left-0" ng-if="x.p_favorite == true">
+						<a href="" ng-click="favorite(x.msgcode,'Favourite')" class="yello" > <i class="icon ion-android-star"></i> </a>
+					</div>
+
+					<a href="#/messageView?MID={{x.id}}">
+					<div class="col-xs-7 padding-left-0">
+						<div class="mail-head-txt">
+							<h2 style="font-size: 15px;">{{x.subject}}</h2>
+						</div>
+						<div class="mail-sub-txt" >
+							<div ng-bind-html="x.body | limitTo: 30 ">
+								{{x.body.length > 30 ? '...' : ''}}
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-4 padding-right-0" style="font-size: 10px;">
+						<div class="time-txt">
+							<i class="ion-clock"></i> {{ x.created_at}} ago
+						</div>
+
+						<div class="text-center text-info" ng-if="x.mob_color_select == false" >
+							<!-- <i class="ion-paperclip" style="color:#0CF; font-size:18px;"> </i> -->
+							<i class="fa fa-reply"></i>
+							<i class="ion-reply" style="color:#0CF; font-size:18px; margin-left:12px"></i>
+						</div>
+
+						<div class="text-center text-info" ng-if="x.mob_color_select == true" >
+							<i class="ion-checkmark-round" style="color:#fff; font-size:18px; margin-left:12px"></i>
+						</div>
+
+					</div> </a>
+					<div class="clearfix"></div>
+				</li>
+
+			</ul>
+		</div>
+
+	</ion-content>
+</div>

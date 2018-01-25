@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<meta name="format-detection" content="telephone=no">
+<title></title>
+
+<link href="../lib/ionic/css/ionic.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+
+<!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+<!-- ionic/angularjs js -->
+<script src="../lib/ionic/js/ionic.bundle.js"></script>
+
+
+<!-- cordova script (this will be a 404 during development) -->
+<script src="../cordova.js"></script>
+<script
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuEFleqbGB5HGqWSsE5F592kh3N3Whmtk&amp;sensor=true"></script>
+<!-- your app's js -->
+<script src="../js/app.js"></script>
+<script src="../js/Language/languages.js"></script>
+<script src="../js/Libs/coordinates.js"></script>
+<script src="../js/Libs/angular-translate.min.js"></script>
+<script src="../js/Controller/controllers.js"></script>
+<script src="../js/factory/NetworkUtils.js"></script>
+<script src="../js/Libs/ng-cordova.min.js"></script>
+<script src="../js/paypal-mobile-js-helper.js"></script>
+<script src="../js/cdv-plugin-paypal-mobile-sdk.js"></script>
+<script src="../js/payPalService.js"></script>
+<script src="../js/Libs/angular.min.js"></script>
+<script src="../js/Libs/qrcode.js"></script>
+
+</head>
+
+<body>
+	<div ng-controller="billingController">
+		<div class="padding">
+			<ul class="cards">
+				<li><img border="0" src="/img/visa.gif" width="44" height="28"
+					hspace="3"></li>
+				<li><img border="0" src="/img/mastercard.gif" width="44"
+					height="28" hspace="3"></li>
+				<li><img border="0" src="/img/amex.gif" width="44" height="28"
+					hspace="3"></li>
+				<li><img border="0" src="/img/discover.gif" width="44"
+					height="28" hspace="3"></li>
+				<li><img border="0" src="/img/diners.gif" width="44"
+					height="28" hspace="3"></li>
+				<li><img border="0" src="/img/jcb.gif" width="44" height="28"
+					hspace="3"></li>
+			</ul>
+			<form class="list billing-form" name="epayform"
+			action="https://sandbox.axiaepay.com/interface/epayform/_Qb5yOydy7srfjszLqArlSrC31ObFb1n"
+			method="POST"
+			onSubmit="document.epayform.submitbutton.value='Please Wait... Processing';"
+			autocomplete="off">
+			<input type="hidden" name="UMsubmit" value="1"> <input
+				type="hidden" name="UMkey" value="_Qb5yOydy7srfjszLqArlSrC31ObFb1n">
+			<input type="hidden" name="UMredirDeclined"
+				value="http://testing.kangarootime.com/save_billing_info"> <input
+				type="hidden" name="UMredirApproved"
+				value="http://testing.kangarootime.com/save_billing_info"> <input
+				type="hidden" name="UMhash"
+				value="s/1447393645.9184809/73ad25eaa4eac4880aba19c249d223dd47109661/y">
+			<input type="hidden" name="UMcommand" value="cc:save"> <input
+				type="hidden" name="UMamount" value=""> <input type="hidden"
+				name="UMtax" value=""> <input type="hidden" name="UMinvoice"
+				value="12345"> <input type="hidden" name="UMcustid" value="">
+			<input type="hidden" name="UMrecurring" value=""> <input
+				type="hidden" name="UMaddcustomer" value=""> <input
+				type="hidden" name="UMbillamount" value=""> <input
+				type="hidden" name="UMcustreceipt" value=""> <input
+				type="hidden" name="UMschedule" value=""> <input
+				type="hidden" name="UMnumleft" value=""> <input
+				type="hidden" name="UMstart" value=""> <input type="hidden"
+				name="UMexpire" value=""> <input type="hidden"
+				name="UMdescription" value=""> <input type="hidden"
+				name="UMechofields" value="all"> <input type="hidden"
+				name="UMformString" value="a:0:{}"> <input type="hidden"
+				name="UMsaveCard" value="true"> <label
+				class="item item-input item-select">
+				<div class="input-label">Card Type</div> <select name="payment_type"
+				size="1">
+					<option value="Visa">Visa</option>
+					<option value="MasterCard">MasterCard</option>
+					<option value="American Express">American Express</option>
+					<option value="Discover">Discover</option>
+					<option value="JCB">JCB</option>
+					<option value="Diners">Diners</option>
+			</select>
+			</label> <label class="item item-input item-stacked-label"> <span
+				class="input-label">Card Number</span> <input type="text"
+				name="UMcard" placeholder="Enter your 16 digits card number">
+			</label> <label class="item item-input item-stacked-label"> <span
+				class="input-label">Card Expiration Date</span> <input type="text"
+				name="UMexpir" placeholder="MMYY">
+			</label> <label class="item item-input item-stacked-label"> <span
+				class="input-label">Card ID (CVV2/CID) Number: <br> <a
+					class="card-id" href="#">[What is the Card ID?]</a></span> <input
+				type="text" placeholder="CVV2/CID Number" name="UMcvv2">
+			</label> <input class="button button-block button-positive" type="submit"
+				name="submitbutton" value="Process Payment &gt;&gt;">
+			<!-- 			<button class="button button-block button-positive" type="submit" -->
+			<!-- 				name="submitbutton" value="Process Payment &gt;&gt;"></button> -->
+
+		</form>
+		</div>
+
+	</div>
+</body>
+</html>

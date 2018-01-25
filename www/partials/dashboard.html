@@ -1,0 +1,71 @@
+<!-- <div class="bar bar-header bar-balanced">
+</div> -->
+<ion-content class="ionic-pseudo">
+<div ng-controller="dashbordController">
+	<!-- <div class="content has-header ionic-pseudo"> -->
+	<div class="list">
+		<div style="border-top: noe" class="item item-avatars">
+			<img ng-src="{{userImage}}" />
+			<h2 style="margin-top: 8px; font-size: 22px;">{{name}}</h2>
+			<p style="color: #006993;">{{address}}</p>
+		</div>
+
+		<a href="#/editProfile" class="item item-icon-left item-icon-right">
+			<i class="icon ion-compose" style="color: #006993;"></i> Profile <span
+			class="item-note"
+		> <i class="icon ion-chevron-right"></i>
+		</span>
+		</a> <a href="#/myMessages" class="item item-icon-left item-icon-right"
+			ng-show="messages"
+		> <i class="icon ion-email" style="color: #006993;"></i> My Messages
+			<span class="item-note"> <i class="icon ion-chevron-right"></i>
+		</span>
+		</a> <a href="#/checkInOut" class="item item-icon-left item-icon-right"
+			ng-show="check_inout"
+		> <i class="icon ion-checkmark-circled" style="color: #006993;"></i>
+			Check In/Out <span class="item-note"> <i
+				class="icon ion-chevron-right"
+			></i>
+		</span> <!-- 		calendar page-->
+		</a>
+		
+		<a href="#/assessmentChild" class="item item-icon-left item-icon-right"
+			ng-show="assessment"
+		> <i class="icon  ion-clipboard" style="color: #006993;"></i> Notes
+			<span class="item-note"> <i class="icon ion-chevron-right"></i>
+		</span>
+		</a>
+		 
+		<a href="#/calendar" class="item item-icon-left item-icon-right"
+			ng-show="calendar"
+		> <i class="icon ion-calendar" style="color: #006993;"></i> Calendar
+			<span class="item-note"> <i class="icon ion-chevron-right"></i>
+		</span>
+		</a> <a href="#/gallery" class="item item-icon-left item-icon-right"
+			ng-show="gallery"
+		> <i class="icon ion-images" style="color: #006993;"></i> Gallery <span
+			class="item-note"
+		> <i class="icon ion-chevron-right"></i>
+		</span>
+		</a> <a href="#/settings" class="item item-icon-left item-icon-right">
+			<i class="icon ion-chatbubbles" style="color: #006993;"></i> Settings
+			<span class="item-note"> <i class="icon ion-chevron-right"></i>
+		</span>
+		</a> <a href="#/billingMenus" class="item item-icon-left item-icon-right"
+			ng-show="billing"
+		> <i class="icon ion-document-text" style="color: #006993;"></i>
+			Billing <span class="item-note"> <i
+				class="icon ion-chevron-right"
+			></i>
+		</span>
+		</a> <a ng-click="logout()" class="item item-icon-left item-icon-right">
+			<i class="icon ion-power" style="color: #006993;"></i> Logout <span
+			class="item-note"
+		> <i class="icon ion-chevron-right"></i>
+		</span>
+		</a>
+
+	</div>
+</div>
+</ion-content>
+<!-- </div> -->

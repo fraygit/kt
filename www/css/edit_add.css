@@ -1,0 +1,97 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/***************Edit in existing class name on ionic.css ********************/
+.item-input{
+	  padding: 2px 0 2px 16px;
+  border-color:#b1b3b8;
+  color:#bfbfbf;
+  border-radius:4px;
+  -webkit-border-radius:4px;
+  -moz-border-radius:4px;
+}
+/***************add css on ionic.css ********************/
+  .button.button-violet {
+    border-color: #6b085d;
+    background-color: #7e0c6e;
+    color: #fff; 
+	padding:0 20px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+     border-radius:4px;
+	}
+    .button.button-violet:hover {
+      color: #fff;
+      text-decoration: none;
+	  -moz-border-radius:4px;
+	-webkit-border-radius:4px;
+     border-radius:4px; }
+
+   .button.button-violet.active, .button.button-violet.activated {
+      border-color: #6b085d;
+      background-color: #7e0c6e;
+      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.15);
+	  -moz-border-radius:4px;
+	-webkit-border-radius:4px;
+     border-radius:4px; }
+    .button.button-violet.button-clear {
+      border-color: transparent;
+      background: none;
+      box-shadow: none;
+      color: #7e0c6e;
+	  -moz-border-radius:4px;
+	-webkit-border-radius:4px;
+     border-radius:4px; }
+    .button.button-violet.button-icon {
+      border-color: transparent;
+      background: none;
+	  -moz-border-radius:4px;
+	-webkit-border-radius:4px;
+     border-radius:4px; }
+    .button.button-violet.button-outline {
+      border-color: #6b085d;
+      background: transparent;
+      color: #7e0c6e; }
+      .button.button-violet.button-outline.active, .button.button-violet.button-outline.activated {
+        background-color: #7e0c6e;
+        box-shadow: none;
+        color: #fff; }
+
+/***************add css on style.css ********************/
+.blue{
+	color:#006c95;
+}
+.blue b{
+	font-size:14px;
+	text-decoration:underline;
+}
+.ash{
+	color:#c3c2c2;
+}
+/***********Date-08/10/15******add css on style.css******************************************/
+.check_in {
+
+		background:url(../img/checkin_button.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	width: 50%;
+	height: 175px;
+	margin: auto;
+	z-index: 2;
+	position: relative;
+	cursor:pointer;
+	font-size:0px;
+}
+.check_out {
+	
+		background:url(../img/checkout_button.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	width: 50%;
+	height: 175px;
+	margin: auto;
+	z-index: 2;
+	position: relative;

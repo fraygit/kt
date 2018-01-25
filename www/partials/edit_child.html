@@ -1,0 +1,149 @@
+<ion-header class="bar bar-header bar-balanced"> <a
+	href="#/dashboard"
+	class="button icon-left ion-arrow-left-c button-clear "
+></a>
+<h3 style="margin-left: 1%; line-height: 0px;">Update Child</h3>
+</ion-header>
+<div class="padding">
+	<ion-content class="content has-header ionic-pseudo">
+	<div ng-controller="EditChildController">
+		<div class="list" align="center">
+			<a ng-click="getImageSaveContact(data)"
+				style="border: none; margin-left: 35%" class="item item-avatars"
+			> <img src="{{childImage}}" width="200" height="200">
+			</a>
+		</div>
+		<div class="row">
+			<div class="col">
+				<label class="item item-input"> <input type="text"
+					ng-model="data.First_Name" placeholder="First Name *"
+				>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<label class="item item-input"> <input type="text"
+					ng-model="data.Middle_Name" placeholder="Middle Name"
+				>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<label class="item item-input"> <input type="text"
+					ng-model="data.Last_Name" placeholder="Last Name * "
+				>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<label class="item item-input"> <input type="text"
+					ng-model="data.Birth_City" placeholder="Birth City * "
+				>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<label class="item item-input"> <input type="text"
+					ng-model="data.Birth_Country" placeholder="Birth Country"
+				>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<label class="item item-input"> <input type="text"
+					ng-model="data.Street_Address" placeholder="Street Address * "
+				>
+				</label>
+			</div>
+		</div>
+		<!-- 		<div class="row"> -->
+		<!-- 			<div class="col"> -->
+		<!-- 				<label class="item item-input"> <input type="text" -->
+		<!-- 					ng-model="data.child_relation" placeholder="Child Relation" -->
+		<!-- 				> -->
+		<!-- 				</label> -->
+		<!-- 			</div> -->
+		<!-- 		</div> -->
+
+
+		<div class="row">
+			<div class="col">
+				<label class="item item-input"> <input type="text"
+					ng-model="data.State" placeholder="State * "
+				>
+				</label>
+			</div>
+			<div class="col">
+				<label class="item item-input"> <input type="tel"
+					ng-model="data.zip_code" placeholder="Zip/Postal Code * "
+				>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<label class="item item-input"> <input type="text"
+					ng-model="data.Country" placeholder="Country "
+				>
+				</label>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="form-group" style="width: 100%; margin-top: 12px;">
+				<div id="datetimepicker1" class="input-group date">
+					<input type="text" ng-model="data.birthday" readonly
+						style="background: none"
+					> <span class="input-group-addon"> <i class="ion-calendar"
+						ng-click="selectDate()" style="color: #fff; font-size: 20px;"
+					></i>
+					</span>
+				</div>
+				<!-- 				<input type="date" id="myDate" value="2000-05-05"> -->
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group" style="margin-top: 10px; border: none;">
+				<label><b>Select Payment Plan : </b></label> <select
+					ng-model="data.plan" id="child_plan_id" name="child[plan_id]"
+				><option value="">--Select Plan--</option>
+					<option ng-repeat="plan in AllPlans" value="{{plan.id}}">{{plan.name}}</option>
+					<!-- 					<option value="Hourly">Hourly</option> -->
+					<!-- 					<option value="Daily">Daily</option> -->
+					<!-- 					<option value="Weekly">Weekly</option> -->
+					<!-- 					<option value="Monthly">Monthly</option> -->
+				</select>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col">
+				<div class="kang-radio radio-primary radio-inline">
+					<input type="radio" name="child[sex]" value="True"
+						ng-model="data.sex" id="inlineRadio1"
+					> <label for="inlineRadio1"> Boy </label>
+				</div>
+				<div class="kang-radio radio-primary radio-inline">
+					<input type="radio" name="child[sex]" value="false"
+						ng-model="data.sex" id="inlineRadio2"
+					> <label for="inlineRadio2"> Girl</label>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">* Indicates Mandatory Field</div>
+		</div>
+		<div class="padding" style="margin: 0 10%">
+			<button ng-disabled="signInFieldForm.$invalid"
+				ng-click="createChild(data)"
+				class="button button-block button-positive" disabled="disabled"
+			>Update Account</button>
+		</div>
+
+	</div>
+</div>

@@ -1,0 +1,28 @@
+
+<ion-header class="bar bar-header bar-balanced"> <a
+	href="#/billingMenus"
+	class="button icon-left ion-arrow-left-c button-clear "
+></a>
+<h3 style="margin-left: 1%; line-height: 0px;">Children</h3>
+</ion-header>
+
+
+<div class="padding" ng-controller="listChildController">
+	<ion-content class="content has-header ionic-pseudo">
+
+	<h3 class="title">&nbsp;</h3>
+
+	<div class="row header">
+		<div class="col">No</div>
+		<div class="col">Name</div>
+	</div>
+
+	<div class="row" ng-repeat="child in listChild"
+		ng-click="clickChild(child)"
+	>
+		<div class="col">{{$index+1}}</div>
+		<div class="col"><span style="text-decoration:underline; color:blue;">{{child.first_name}} {{child.last_name}}</span></div>
+	</div>
+	</ion-content>
+
+</div>

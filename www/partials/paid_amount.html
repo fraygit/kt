@@ -1,0 +1,88 @@
+
+<ion-header class="bar bar-header bar-balanced"> <a
+	href="#/billingMenus"
+	class="button icon-left ion-arrow-left-c button-clear "
+></a>
+<h3 style="margin-left: 1%; line-height: 0px;">Invoices</h3>
+</ion-header>
+<div class="padding" ng-controller="paidAmountController">
+	<ion-content class="content has-header ionic-pseudo">
+
+	<div class="row header" ng-show="noData">
+		<h3>{{message}}</h3>
+	</div>
+
+	<div class="invoice-wrapper">
+		<h4 ng-show="invoiceData.length > 0">For a detailed list of charges please visit <a href="https://www.kangarootime.com/">kangarootime.com</a></h4>
+
+		<div class="invoice-item" ng-repeat="invoice in invoiceData">
+			<div class="invoice-header">
+				Invoice:&nbsp<span>#{{invoice.number}}</span>
+			</div>
+			<div class="row adp-row">
+				<div style="text-align: right" class="col">
+					<p class="adp-caption">Date:</p>
+				</div>
+				<div class="col col-50">
+					<p class="hader_text">
+						<span>{{invoice.date}}</span>
+					</p>
+				</div>
+			</div>
+			<div class="row adp-row">
+				<div style="text-align: right" class="col">
+					<p class="adp-caption">Previous Balance:</p>
+				</div>
+				<div class="col col-50">
+					<p class="hader_text">
+						<span>{{invoice.previous_balance}}</span>
+					</p>
+				</div>
+			</div>
+			<div class="row adp-row">
+				<div style="text-align: right" class="col">
+					<p class="adp-caption">Previous Payments:</p>
+				</div>
+				<div class="col col-50">
+					<p class="hader_text">
+						<span>{{invoice.previous_payments}}</span>
+					</p>
+				</div>
+			</div>
+			<div class="row adp-row">
+				<div style="text-align: right" class="col">
+					<p class="adp-caption">Balance Forward:</p>
+				</div>
+				<div class="col col-50">
+					<p class="hader_text">
+						<span>{{invoice.balance_forward}}</span>
+					</p>
+				</div>
+			</div>
+			<div class="row adp-row">
+				<div style="text-align: right" class="col">
+					<p class="adp-caption">New Charges:</p>
+				</div>
+				<div class="col col-50">
+					<p class="hader_text">
+						<span>{{invoice.new_charges}}</span>
+					</p>
+				</div>
+			</div>
+			<div class="row adp-row">
+				<div style="text-align: right" class="col">
+					<p class="adp-caption">New Balance:</p>
+				</div>
+				<div class="col col-50">
+					<p class="hader_text">
+						<span>{{invoice.new_balance}}</span>
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	</ion-content>
+
+</div>

@@ -1,0 +1,74 @@
+<ion-header class="bar bar-header bar-balanced"> <!-- <button class="button button-icon icon ion-navicon"></button> -->
+<!-- <a href="#/dashboard" class="button-clear"> <i class="ion-arrow-left-c"></i> Back</a> -->
+<a href="#/billingMenus"
+	class="button icon-left ion-arrow-left-c button-clear "
+></a>
+<h3 style="margin-left: 1%; line-height: 0px;">Billing</h3>
+</ion-header>
+<h4>Billing</h4>
+<div ng-controller="billingController">
+	<ul class="cards">
+		<li><img border="0" src="../img/visa.gif" width="44" height="28"
+			hspace="3"
+		></li>
+		<li><img border="0" src="../img/mastercard.gif" width="44"
+			height="28" hspace="3"
+		></li>
+		<li><img border="0" src="../img/amex.gif" width="44" height="28"
+			hspace="3"
+		></li>
+		<li><img border="0" src="../img/discover.gif" width="44"
+			height="28" hspace="3"
+		></li>
+		<li><img border="0" src="../img/diners.gif" width="44"
+			height="28" hspace="3"
+		></li>
+		<li><img border="0" src="../img/jcb.gif" width="44" height="28"
+			hspace="3"
+		></li>
+	</ul>
+	<form class="list billing-form" name="epayform"
+		ng-submit="submit(data)"
+		onSubmit="document.epayform.submitbutton.value='Please Wait... Processing';"
+		autocomplete="off"
+	>
+		<label class="item item-input item-select">
+			<div class="input-label">Card Type</div> <select name="payment_type"
+			size="1" ng-model="data.payment_type"
+		>
+				<option value="Visa">Visa</option>
+				<option value="MasterCard">MasterCard</option>
+				<option value="American Express">American Express</option>
+				<option value="Discover">Discover</option>
+				<option value="JCB">JCB</option>
+				<option value="Diners">Diners</option>
+		</select>
+		</label> <label class="item item-input item-stacked-label"> <span
+			class="input-label"
+		>Card Number</span> <input type="text" name="UMcard"
+			placeholder="Enter your 16 digits card number" ng-model="data.UMcard"
+		>
+
+		</label> <label class="item item-input item-stacked-label"> <span
+			class="input-label"
+		>Card Expiration Date</span> <input type="text" name="UMexpir"
+			placeholder="MMYY" ng-model="data.UMexpir"
+		>
+
+		</label> <label class="item item-input item-stacked-label"> <span
+			class="input-label"
+		>Card ID (CVV2/CID) Number: <br> <a class="card-id" href="#">[What
+					is the Card ID?]</a></span> <input type="text" placeholder="CVV2/CID Number"
+			name="UMcvv2" ng-model="data.UMcvv2"
+		>
+
+		</label> <input class="button button-block button-positive" type="submit"
+			name="submitbutton" value="Process Payment &gt;&gt;"
+		>
+
+		<!-- 			<button class="button button-block button-positive" type="submit" -->
+		<!-- 				name="submitbutton" value="Process Payment &gt;&gt;"></button> -->
+
+	</form>
+</div>
+</span>

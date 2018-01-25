@@ -1,0 +1,28 @@
+<ion-header class="bar bar-header bar-balanced"> <a
+    href="#/billingMenus"
+    class="button icon-left ion-arrow-left-c button-clear "
+    ></a>
+<h3 style="margin-left: 1%; line-height: 0px;">Billing</h3>
+</ion-header>
+<h4>Billing ACH</h4>
+
+
+<ion-content class="content has-header ionic-pseudo iframe-issue" scroll="true" overflow-scroll="true">
+    
+    
+    <div ng-controller="billingACHController">
+        <div style="overflow-y: scroll !important; -webkit-overflow-scrolling: touch !important;">
+            <iframe style="width:100%; height:100%;  min-height:600px;" frameborder="0"
+                onLoad="checkIframeUrl(src);" src="{{customUrl}}"
+                > </iframe>
+        </div>
+        
+    </div>
+    
+</ion-content>
+<style>
+    .iframe-issue {
+        -webkit-overflow-scrolling: touch !important;
+        overflow: scroll !important;
+    }
+</style>
